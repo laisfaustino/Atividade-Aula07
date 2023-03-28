@@ -1,22 +1,16 @@
-package exercio1aula07;
-
-
+package aula_pacotes.clientes;
 
 public class Cliente {
 
-	
 	private String nome;
-	private String cpf;
-	private String email;
-	private String endereco;
-	private String telefone;
+	private int genero;
+	private int pagamento;
 	
-	public Cliente(String nome, String cpf, String email, String endereco, String telefone) {
+	
+	public Cliente(String nome, int genero, int pagamento) {
 		this.nome = nome;
-		this.cpf = cpf;
-		this.email = email;
-		this.endereco = endereco;
-		this.telefone = telefone;
+		this.genero = genero;
+		this.pagamento = pagamento;
 	}
 
 	public String getNome() {
@@ -27,47 +21,55 @@ public class Cliente {
 		this.nome = nome;
 	}
 
-	public String getCpf() {
-		return cpf;
+	public int getGenero() {
+		return genero;
 	}
 
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setGenero(int genero) {
+		this.genero = genero;
 	}
 
-	public String getEmail() {
-		return email;
+	public int getPagamento() {
+		return pagamento;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
-
-	public String getTelefone() {
-		return telefone;
-	}
-
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+	public void setPagamento(int pagamento) {
+		this.pagamento = pagamento;
 	}
 	
-	public void visualizar() {
-		System.out.println("\n********************");
-		System.out.println("   Dados do Cliente"   );
-		System.out.println("\n********************");
-		System.out.println("\nNome:" + this.nome);
-		System.out.println("\nCPF:" + this.cpf);
-		System.out.println("\nE-mail:" + this.email);
-		System.out.println("\nEndereço:" + this.endereco);
-		System.out.println("\nTelefone:" + this.telefone);
+public void visualizar() {
 		
-}
+		String pagamento = "";
+		
+		switch(this.pagamento) {
+		case 1 -> pagamento = "Cartão de Crédito";
+		case 2 -> pagamento = "Cartão de Débito";
+		case 3 -> pagamento = "Pix";
+		case 4 -> pagamento = "Boleto";
+		}
+		
+		String genero = "";
+		
+		switch(this.genero) {
+		case 1 -> genero = "Masculino";
+		case 2 -> genero = "Feminino";
+		case 3 -> genero = "Não binario";
+		case 4 -> genero = "Transgenero";
+		case 5 -> genero = "Não dizer";
+		
+		}
+			
+		System.out.println("                                      ");
+		System.out.println("**************************************");
+		System.out.println("           DADOS DO CLIENTE           ");
+		System.out.println("**************************************");
+		System.out.println("Nome do Cliente: " + this.nome);
+		System.out.println("Genêro: " + genero);
+		System.out.println("Tipo de Pagamento: " + pagamento);
+		System.out.println("**************************************");
+		System.out.println("**************************************");
+		
+	}
+	
+	
 }

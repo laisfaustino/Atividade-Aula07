@@ -1,13 +1,15 @@
-package exercio1aula07;
-
+package aula_pacotes.clientes;
 
 public class TestaCliente {
 
 	public static void main(String[] args) {
-		
-		Cliente g1 = new Cliente("Lais","111.222.333-00","Rua:Generation,123","(011)91234-56789");
-		
-		g1.visualizar();
+
+        //public PessoaFisica(String nome, int genero, float rg, int id, int pagamento, int cpf)
+        
+        PessoaFisica cf1 = new PessoaFisica ("Queren", 1, 2, "42568925601");
+        cf1.visualizar();
+        
+      
 	}
 
 }
