@@ -6,7 +6,7 @@ public class TestaCliente {
 
         //public PessoaFisica(String nome, int genero, float rg, int id, int pagamento, int cpf)
         
-        PessoaFisica cf1 = new PessoaFisica ("Queren", 1, 2, "42568925601");
+        PessoaFisica cf1 = new PessoaFisica ("Lais", 1, 2, "42568925601");
         cf1.visualizar();
         
       
